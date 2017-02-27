@@ -6,7 +6,8 @@ from dask.distributed import Client
 @delayed
 def is_prime(n):
     i = 0
-    while i < 10000000:
+    while i < 1000000:  # Uma espera processada so pra 
+                        # gente se achar importante
         i += 1
     for j in range(2, n - 1):
         if (n % j) == 0:

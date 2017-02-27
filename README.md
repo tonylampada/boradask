@@ -1,6 +1,6 @@
 # boradask
 
-POC de processamento em cluster usando dask
+POC de processamento em cluster usando [dask](http://dask.pydata.org/)
 
 ### Como rodar o POC
 
@@ -23,7 +23,11 @@ docker exec -it d1 dask-scheduler # deixa um terminal rodando isso aqui
 # Inicia um worker em cada container
 docker exec -it d1 dask-worker localhost:8786 # deixa rodando
 docker exec -it d2 dask-worker scheduler:8786 # deixa rodando
+```
 
+Nesse ponto vc já pode abrir o browser e deixar preparado pra ficar assistindo a turma trabalhando: http://localhost:8787/status
+
+```
 # Taca o pau no processamento distribuido
 docker exec -it d1 python primes.py
 ```
